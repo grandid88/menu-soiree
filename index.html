@@ -122,7 +122,6 @@ body{
 
 .menu-deco{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none}
 .menu-deco-palm{top:40px;right:-6px;width:min(26vw,150px);opacity:.95}
-.menu-deco-turtle{left:-14px;bottom:-4px;width:min(64vw,360px);opacity:.95}
 
 .menu-card{position:relative;z-index:1;text-align:center;padding:10px 6px 40px}
 .menu-title{
@@ -165,6 +164,7 @@ body{
 .closing{width:100%;max-width:720px;text-align:center;padding:4px 20px calc(env(safe-area-inset-bottom) + 64px)}
 .closing .ornament{justify-content:center;margin:0 0 20px}
 .closing p{margin:0;font-size:clamp(20px,5.4vw,24px);font-style:italic;font-weight:500;line-height:1.6;color:var(--sauge)}
+.closing-turtle{display:block;margin:30px auto 0;width:min(62vw,280px);height:auto}
 
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes decoIn{to{opacity:1}}
@@ -213,7 +213,6 @@ body{
 
   <section class="menu-section reveal" id="menu" aria-label="Menu de la soirée">
     <img class="menu-deco menu-deco-palm" src="assets/deco-menu-palmier.webp" alt="" aria-hidden="true" width="420" height="1001" decoding="async">
-    <img class="menu-deco menu-deco-turtle" src="assets/deco-menu-tortue.webp" alt="" aria-hidden="true" width="760" height="519" decoding="async">
 
     <div class="menu-card">
       <div class="menu-title">Menu</div>
@@ -269,6 +268,7 @@ body{
       <span></span>
     </div>
     <p>Bon appétit !</p>
+    <img class="closing-turtle" src="assets/deco-menu-tortue.webp" alt="" aria-hidden="true" width="760" height="519" decoding="async">
   </section>
 
 </main>
