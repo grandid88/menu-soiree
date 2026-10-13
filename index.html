@@ -120,7 +120,8 @@ body{
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .reveal.is-visible{opacity:1;transform:none}
 
-.menu-deco{position:absolute;z-index:0;top:50%;transform:translateY(-50%);width:min(15vw,72px);height:auto;max-height:84%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.8}
+.courses-wrap{position:relative}
+.menu-deco{position:absolute;z-index:0;top:-6px;bottom:-6px;height:calc(100% + 12px);width:min(13vw,62px);object-fit:cover;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.8}
 .frise-left{left:-4px}
 .frise-right{right:-4px}
 
@@ -214,52 +215,53 @@ body{
   </section>
 
   <section class="menu-section reveal" id="menu" aria-label="Menu de la soirée">
-    <img class="menu-deco frise-left" src="assets/frise-gauche.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
-    <img class="menu-deco frise-right" src="assets/frise-droite.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
-
     <div class="menu-card">
       <div class="menu-title">Menu</div>
-      <div class="menu-names">Isabelle &amp; Didier</div>
       <div class="ornament menu-ornament" aria-hidden="true">
         <span></span>
         <svg width="20" height="18" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 20.5S2.5 14.8 2.5 8.2A5 5 0 0 1 12 5.6a5 5 0 0 1 9.5 2.6c0 6.6-9.5 12.3-9.5 12.3z"/></svg>
         <span></span>
       </div>
 
-      <div class="course">
-        <div class="course-label">Entrée</div>
-        <p class="course-text">
-          <span class="light">Mise en bouche</span>
-          Déclinaison de foie gras
-        </p>
-      </div>
+      <div class="courses-wrap">
+        <img class="menu-deco frise-left" src="assets/frise-gauche.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
+        <img class="menu-deco frise-right" src="assets/frise-droite.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
 
-      <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
+        <div class="course">
+          <div class="course-label">Entrée</div>
+          <p class="course-text">
+            <span class="light">Mise en bouche</span>
+            Déclinaison de foie gras
+          </p>
+        </div>
 
-      <div class="course">
-        <div class="course-label">Plat</div>
-        <p class="course-text">
-          Mijoté de veau aux trompettes,<br>
-          pommes grenailles rôties<br>
-          et tomate provençale
-        </p>
-      </div>
+        <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
 
-      <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
+        <div class="course">
+          <div class="course-label">Plat</div>
+          <p class="course-text">
+            Mijoté de veau aux trompettes,<br>
+            pommes grenailles rôties<br>
+            et tomate provençale
+          </p>
+        </div>
 
-      <div class="course">
-        <div class="course-label">Fromage</div>
-        <p class="course-text">Duo de fromages des montagnes</p>
-      </div>
+        <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
 
-      <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
+        <div class="course">
+          <div class="course-label">Fromage</div>
+          <p class="course-text">Duo de fromages des montagnes</p>
+        </div>
 
-      <div class="course">
-        <div class="course-label">Dessert</div>
-        <p class="course-text">
-          <span class="light">Desserts des mariés :</span>
-          Dame Hélène, la Reine Marguerite,<br>Lady Darling
-        </p>
+        <div class="ornament course-sep" aria-hidden="true"><span></span><svg width="15" height="13" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="color:var(--sauge)"><path d="M3 19C3 10 10 3 21 3c0 11-7 18-16 18-1.3 0-2-.3-2-2z"/><path d="M5 19C11 13 15 9 20 4"/></svg><span></span></div>
+
+        <div class="course">
+          <div class="course-label">Dessert</div>
+          <p class="course-text">
+            <span class="light">Desserts des mariés :</span>
+            Dame Hélène, la Reine Marguerite,<br>Lady Darling
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -270,7 +272,7 @@ body{
       <svg width="22" height="20" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 20.5S2.5 14.8 2.5 8.2A5 5 0 0 1 12 5.6a5 5 0 0 1 9.5 2.6c0 6.6-9.5 12.3-9.5 12.3z"/></svg>
       <span></span>
     </div>
-    <p>Bon appétit !</p>
+    <p>Régalez-vous !</p>
     <img class="closing-turtle" src="assets/deco-menu-tortue.webp" alt="" aria-hidden="true" width="760" height="405" decoding="async">
   </section>
 
