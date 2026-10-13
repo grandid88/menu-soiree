@@ -120,8 +120,9 @@ body{
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .reveal.is-visible{opacity:1;transform:none}
 
-.menu-deco{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none}
-.menu-deco-palm{top:4px;right:-10px;width:min(30vw,170px);opacity:.9}
+.menu-deco{position:absolute;z-index:0;top:50%;transform:translateY(-50%);width:min(15vw,72px);height:auto;max-height:84%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.8}
+.frise-left{left:-4px}
+.frise-right{right:-4px}
 
 .menu-card{position:relative;z-index:1;text-align:center;padding:2px 6px 14px}
 .menu-title{
@@ -165,7 +166,7 @@ body{
 .closing{width:100%;max-width:720px;text-align:center;padding:4px 20px calc(env(safe-area-inset-bottom) + 40px)}
 .closing .ornament{justify-content:center;margin:0 0 12px}
 .closing p{margin:0;font-size:clamp(20px,5.4vw,24px);font-style:italic;font-weight:500;line-height:1.6;color:var(--sauge)}
-.closing-turtle{display:block;margin:14px auto 0;width:min(68vw,320px);height:auto;transform:translateX(-9%)}
+.closing-turtle{display:block;margin:14px auto 0;width:min(68vw,320px);height:auto}
 
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes decoIn{to{opacity:1}}
@@ -213,7 +214,8 @@ body{
   </section>
 
   <section class="menu-section reveal" id="menu" aria-label="Menu de la soirée">
-    <img class="menu-deco menu-deco-palm" src="assets/deco-menu-palmier.webp" alt="" aria-hidden="true" width="640" height="734" decoding="async">
+    <img class="menu-deco frise-left" src="assets/frise-gauche.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
+    <img class="menu-deco frise-right" src="assets/frise-droite.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
 
     <div class="menu-card">
       <div class="menu-title">Menu</div>
