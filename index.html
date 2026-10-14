@@ -278,23 +278,46 @@ body{
       <span></span>
     </div>
     <p>Régalez-vous !</p>
-    <img class="closing-turtle" src="assets/deco-menu-tortue.webp" alt="" aria-hidden="true" width="760" height="405" decoding="async">
+    <img class="closing-turtle" id="turtle" src="assets/deco-menu-tortue.webp" data-src="assets/tortue-animee.webp" alt="" aria-hidden="true" width="760" height="405" decoding="async">
   </section>
 
 </main>
 
 <script>
 (function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var reveals = document.querySelectorAll('.reveal');
+  var turtle = document.getElementById('turtle');
+
   function show(el){ el.classList.add('is-visible'); }
+  function startTurtle(){
+    if (!turtle) return;
+    var anim = turtle.getAttribute('data-src');
+    if (anim) { turtle.src = anim; turtle.removeAttribute('data-src'); }
+  }
+
   if (!('IntersectionObserver' in window)) {
     for (var i=0;i<reveals.length;i++) show(reveals[i]);
+    if (!reduce) startTurtle();
     return;
   }
+
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if (e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
   for (var j=0;j<reveals.length;j++) io.observe(reveals[j]);
+
+  /* La tortue démarre son animation quand elle entre à l'écran (fichier préchargé après le chargement de la page) */
+  if (turtle && !reduce) {
+    window.addEventListener('load', function(){
+      var anim = turtle.getAttribute('data-src');
+      if (anim) new Image().src = anim;
+    });
+    var to = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ startTurtle(); to.unobserve(e.target); } });
+    }, { threshold: 0.3 });
+    to.observe(turtle);
+  }
 })();
 </script>
 </body>
