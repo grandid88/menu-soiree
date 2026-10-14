@@ -51,6 +51,10 @@ body{
 }
 .rise{opacity:0;animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s)}
 .medallion{
+  position:absolute;
+  z-index:2;
+  top:calc(env(safe-area-inset-top) + 54px);
+  right:28px;
   width:88px;height:88px;
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
@@ -121,9 +125,9 @@ body{
 .reveal.is-visible{opacity:1;transform:none}
 
 .courses-wrap{position:relative}
-.menu-deco{position:absolute;z-index:0;top:-6px;bottom:-6px;height:calc(100% + 12px);width:min(13vw,62px);object-fit:cover;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.8}
-.frise-left{left:-4px}
-.frise-right{right:-4px}
+.menu-frise{position:absolute;z-index:0;top:-30px;bottom:-30px;width:min(11vw,52px);background-repeat:repeat-y;background-position:top center;background-size:100% auto;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.78}
+.frise-left{left:-2px;background-image:url('assets/frise-gauche.webp')}
+.frise-right{right:-2px;background-image:url('assets/frise-droite.webp')}
 
 .menu-card{position:relative;z-index:1;text-align:center;padding:2px 6px 14px}
 .menu-title{
@@ -191,8 +195,9 @@ body{
     <img class="deco deco-tl" src="assets/deco-menu-coin-haut-gauche.webp" alt="" aria-hidden="true" width="760" height="820" decoding="async">
     <img class="deco deco-br" src="assets/deco-menu-coin-bas-droite.webp" alt="" aria-hidden="true" width="760" height="820" decoding="async">
 
+    <div class="medallion rise" style="--d:.15s" aria-hidden="true">I&nbsp;&amp;&nbsp;D</div>
+
     <div class="intro-content">
-      <div class="medallion rise" style="--d:.15s" aria-hidden="true">I&nbsp;&amp;&nbsp;D</div>
       <div class="eyebrow rise" style="--d:.35s">Isabelle &amp; Didier</div>
       <h1 class="names rise" style="--d:.5s">Menu</h1>
 
@@ -224,8 +229,8 @@ body{
       </div>
 
       <div class="courses-wrap">
-        <img class="menu-deco frise-left" src="assets/frise-gauche.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
-        <img class="menu-deco frise-right" src="assets/frise-droite.webp" alt="" aria-hidden="true" width="220" height="792" decoding="async">
+        <div class="menu-frise frise-left" aria-hidden="true"></div>
+        <div class="menu-frise frise-right" aria-hidden="true"></div>
 
         <div class="course">
           <div class="course-label">Entrée</div>
